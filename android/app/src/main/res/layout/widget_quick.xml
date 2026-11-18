@@ -1,0 +1,3 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="Iniciar reflexão">
+<ImageView android:layout_width="56dp" android:layout_height="56dp" android:layout_gravity="center" android:src="@drawable/recomeco_icon" android:contentDescription="Iniciar reflexão"/>
+</FrameLayout>

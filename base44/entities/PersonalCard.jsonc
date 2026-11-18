@@ -1,0 +1,112 @@
+{
+  "name": "PersonalCard",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "green",
+        "orange"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "category_key": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "archived"
+      ],
+      "enumColors": [
+        "gray",
+        "green",
+        "red"
+      ],
+      "default": "active"
+    },
+    "source_template_id": {
+      "type": "string"
+    },
+    "anchor_phrase": {
+      "type": "string"
+    },
+    "thought": {
+      "type": "string"
+    },
+    "response": {
+      "type": "string"
+    },
+    "situation": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "emotions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "intensity_before": {
+      "type": "number"
+    },
+    "intensity_after": {
+      "type": "number"
+    },
+    "evidence_for": {
+      "type": "string"
+    },
+    "evidence_against": {
+      "type": "string"
+    },
+    "alternative_perspective": {
+      "type": "string"
+    },
+    "next_review_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "title",
+    "status"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

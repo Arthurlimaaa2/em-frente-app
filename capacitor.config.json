@@ -1,0 +1,9 @@
+{
+  "appId": "br.com.cartoesenfrentamento.app",
+  "appName": "Em Frente",
+  "webDir": "dist-mobile",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": false
+  }
+}

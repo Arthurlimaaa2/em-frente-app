@@ -1,0 +1,38 @@
+{
+  "name": "Favorite",
+  "type": "object",
+  "properties": {
+    "target_type": {
+      "type": "string",
+      "enum": [
+        "template",
+        "personal"
+      ],
+      "enumColors": [
+        "blue",
+        "purple"
+      ]
+    },
+    "target_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "target_type",
+    "target_id"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

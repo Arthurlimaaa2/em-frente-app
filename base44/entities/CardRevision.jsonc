@@ -1,0 +1,39 @@
+{
+  "name": "CardRevision",
+  "type": "object",
+  "properties": {
+    "card_id": {
+      "type": "string"
+    },
+    "revision_number": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "snapshot_json": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "card_id",
+    "revision_number"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

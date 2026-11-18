@@ -1,0 +1,143 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 98%;
+    --foreground: 270 20% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 20% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 20% 18%;
+    --primary: 273 24% 44%;
+    --primary-foreground: 30 33% 98%;
+    --secondary: 270 35% 93%;
+    --secondary-foreground: 270 20% 22%;
+    --muted: 270 25% 95%;
+    --muted-foreground: 270 10% 41%;
+    --accent: 10 50% 93%;
+    --accent-foreground: 10 35% 30%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 18% 87%;
+    --input: 270 18% 87%;
+    --ring: 273 24% 44%;
+    --radius: 1rem;
+    --chart-1: 273 24% 44%;
+    --chart-2: 26 58% 58%;
+    --chart-3: 197 30% 40%;
+    --chart-4: 43 64% 60%;
+    --chart-5: 12 60% 62%;
+    --font-heading: ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 30 33% 98%;
+    --sidebar-foreground: 270 20% 22%;
+    --sidebar-primary: 273 24% 44%;
+    --sidebar-primary-foreground: 30 33% 98%;
+    --sidebar-accent: 270 35% 93%;
+    --sidebar-accent-foreground: 270 20% 22%;
+    --sidebar-border: 270 18% 87%;
+    --sidebar-ring: 273 24% 44%;
+  }
+
+  :root[data-appearance="dark"] {
+    color-scheme: dark;
+    --background: 240 16% 10%;
+    --foreground: 220 20% 95%;
+    --card: 240 15% 14%;
+    --card-foreground: 220 20% 95%;
+    --popover: 240 15% 14%;
+    --popover-foreground: 220 20% 95%;
+    --primary: 267 70% 74%;
+    --primary-foreground: 260 30% 12%;
+    --secondary: 240 14% 23%;
+    --secondary-foreground: 220 20% 94%;
+    --muted: 240 14% 19%;
+    --muted-foreground: 225 12% 72%;
+    --accent: 18 38% 25%;
+    --accent-foreground: 25 90% 88%;
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 12% 29%;
+    --input: 240 12% 29%;
+    --ring: 267 70% 74%;
+    --sidebar-background: 240 16% 10%;
+    --sidebar-foreground: 220 20% 95%;
+    --sidebar-primary: 267 70% 74%;
+    --sidebar-primary-foreground: 260 30% 12%;
+    --sidebar-accent: 240 14% 23%;
+    --sidebar-accent-foreground: 220 20% 94%;
+    --sidebar-border: 240 12% 29%;
+    --sidebar-ring: 267 70% 74%;
+  }
+
+  :root[data-appearance="colorblind"] {
+    color-scheme: light;
+    --background: 205 45% 98%;
+    --foreground: 218 38% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 218 38% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 38% 14%;
+    --primary: 211 78% 34%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 204 64% 91%;
+    --secondary-foreground: 213 58% 22%;
+    --muted: 205 34% 94%;
+    --muted-foreground: 216 22% 35%;
+    --accent: 35 96% 87%;
+    --accent-foreground: 24 83% 25%;
+    --destructive: 6 72% 38%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 33% 78%;
+    --input: 210 33% 78%;
+    --ring: 211 78% 34%;
+    --chart-1: 211 78% 34%;
+    --chart-2: 27 94% 42%;
+    --chart-3: 190 74% 31%;
+    --chart-4: 46 90% 38%;
+    --chart-5: 328 66% 40%;
+    --sidebar-background: 205 45% 98%;
+    --sidebar-foreground: 218 38% 14%;
+    --sidebar-primary: 211 78% 34%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 204 64% 91%;
+    --sidebar-accent-foreground: 213 58% 22%;
+    --sidebar-border: 210 33% 78%;
+    --sidebar-ring: 211 78% 34%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  .app-header {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
